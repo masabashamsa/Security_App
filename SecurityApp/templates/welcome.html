@@ -1,0 +1,35 @@
+<!-- templates/welcome.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+    <title>Django Project</title>
+
+</head>
+<body>
+    <h2>Welcome to Group 12's Software Security Project</h2>
+
+     <!-- Card for "The task" paragraph -->
+    
+     <div class="card">
+        <p><strong>The task:</strong></p>
+        <p>Design a simple web application in a programming environment of your choice that illustrates two of the above vulnerabilities. You should also come up with a secure version of the application that demonstrates how to prevent against their associated attacks</p>
+    </div>
+
+
+    <!-- Card for "Our project" paragraph -->
+    <div class="card">
+        <p><strong>Our project:</strong></p>
+        <p>A Django application illustrating the SQL injection Vulnerability and the CSRF vulnerability</p>
+    </div>
+
+     <!-- Links as buttons -->
+     <a href="{% url 'vulnerable_query' %}" class="button">Go to SQL injection vulnerability page</a>
+     <a href="{% url 'vulnerable_change_password' %}" class="button">Go to the CSRF vulnerability Page</a>
+
+</body>
+</html>
